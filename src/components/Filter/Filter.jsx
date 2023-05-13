@@ -7,7 +7,7 @@ const Filter = () => {
 
   return (
     <>
-      <p className={styles.p}>Fined contacts by name</p>
+      <p className={styles.p}>Find contacts by name</p>
       <input
         className={styles.input}
         onChange={e => dispatch(setFilter(e))}
