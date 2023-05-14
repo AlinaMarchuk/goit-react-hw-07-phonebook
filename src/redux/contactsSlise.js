@@ -17,7 +17,7 @@ const contactsSlise = createSlice({
       state.isLoading = true;
     },
     [getContactsOperation.fulfilled]: (state, { payload }) => {
-      state.items = payload.map(contact => ({ ...contact }));
+      state.items = payload;
       state.isLoading = false;
     },
     [getContactsOperation.rejected]: (state, { payload }) => {
@@ -29,7 +29,7 @@ const contactsSlise = createSlice({
       state.isLoading = true;
     },
     [postContactOperation.fulfilled]: (state, { payload }) => {
-      state.items.push({ ...payload });
+      state.items.push(payload);
       state.isLoading = false;
     },
     [postContactOperation.rejected]: (state, { payload }) => {

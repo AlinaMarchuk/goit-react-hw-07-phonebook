@@ -14,7 +14,7 @@ export const getContacts = () => {
 };
 
 export const addContact = data => {
-  return instance.post(`/${CONTACTS_URL}`, JSON.stringify(data));
+  return instance.post(`/${CONTACTS_URL}`, data);
 };
 
 export const deleteContact = id => {
